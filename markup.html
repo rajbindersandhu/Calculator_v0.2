@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator version 0.2</title>
+        <link rel="stylesheet" href ="styling.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="box">
+            <div class="entry">
+                <button id="entry-button" onclick="onOff()"><i class="material-icons" style="font-size:48px;">power_settings_new</i></button>
+                
+            </div>
+            <div id="tagName">ON <i class="fa fa-arrow-circle-up" style="font-size:48px;"></i> OFF</div>
+            <div class="cal-container" id="cal-box">            
+                <div class="screen-row" >   
+                    <div id="memory-screen"> </div>               
+                    <div id="screen">Enter your value</div>                    
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col btn btn-danger btn-outline-dark fs-1" onclick = "backSpace()">
+                            C
+                        </div>
+                        <div class="col btn btn-danger btn-outline-dark fs-1" onclick = "allClear()">
+                            AC
+                        </div>
+                        <div class="col btn btn-success btn-outline-dark fs-1" onclick = "addPrefix()">
+                            N
+                        </div>
+                        <div class="col btn btn-primary btn-outline-dark fs-1" onclick = "showResult()">
+                            =
+                        </div>
+                    </div>
+                    <div class="row"  >
+                        <div class="col-3 btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('1')">
+                        1
+                        </div>
+                        <div class="col-3 btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('2')">
+                            2
+                        </div>
+                        <div class="col-3 btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('3')">
+                            3
+                        </div>
+                        <div class="col-3 btn btn-primary btn-outline-dark fs-1" onclick = "operatorClicked('+')">
+                        +
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('4')">
+                        4
+                        </div>
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('5')">
+                            5
+                        </div>
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('6')">
+                            6
+                        </div>
+                        <div class="col btn btn-primary btn-outline-dark fs-1" onclick = "operatorClicked('-')">
+                        -
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('7')">
+                            7
+                        </div> 
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('8')">
+                        8
+                        </div>
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked(9)">
+                        9
+                        </div>
+                        <div class="col btn btn-primary btn-outline-dark fs-1" onclick = "operatorClicked('*')"> 
+                            *
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('0')">
+                        0
+                        </div>
+                        <div class="col btn btn-warning btn-outline-dark fs-2" onclick = "numberClicked('.')">
+                        .
+                        </div>
+                        <div class="col btn btn-primary btn-outline-dark fs-1" onclick = "operatorClicked('%')">
+                        %
+                        </div>
+                        <div class="col btn btn-primary btn-outline-dark fs-1"onclick = "operatorClicked('/')">
+                            /
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
